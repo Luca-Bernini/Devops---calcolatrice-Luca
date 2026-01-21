@@ -45,3 +45,6 @@ pytest test_calcolatrice.py
     - git commit -m "commento"
     - git branch -M main
     - git push -u origin main
+
+## esecuzione test
+    - pytest -v
