@@ -12,3 +12,9 @@ def sottrazione(a: float, b: float):
     else:
         # Se uno dei due non è un numero, restituiamo None
         return None
+
+def moltiplicazione(a: float, b: float):
+    if isinstance(a, (int, float)) and isinstance(b, (int, float)):
+        return a * b
+    else:
+        return None

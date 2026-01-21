@@ -1,26 +1,22 @@
-name: Pytest Pipeline
+name: pytest
 
 on:
   push:
-    branches: [ main, master, develop ]
+    branches: [ main ]
   pull_request:
-    branches: [ main, master, develop ]
+    branches: [ main ]
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        python-version: ['3.10', '3.11']
-
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v3
 
-    - name: Set up Python ${{ matrix.python-version }}
+    - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: '3.13'
 
     - name: Install dependencies
       run: |
@@ -29,4 +25,4 @@ jobs:
 
     - name: Run tests with pytest
       run: |
-        pytest -v --tb=short
+        pytest -v
