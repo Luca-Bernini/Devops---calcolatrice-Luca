@@ -36,3 +36,12 @@ pytest test_calcolatrice.py
 
 ## GitHub
     - git init
+
+## collegamento alla repo con link http dopo origin
+    - git remote add origin
+
+## commit al main branch 
+    - git add
+    - git commit -m "commento"
+    - git branch -M main
+    - git push -u origin main
