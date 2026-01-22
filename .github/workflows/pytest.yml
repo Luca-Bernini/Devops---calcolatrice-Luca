@@ -25,4 +25,5 @@ jobs:
 
     - name: Run tests with pytest
       run: |
-        pytest -v
+      # --tb=short produce un traceback più corto e leggibile dove vedi solo gli errori principali
+        pytest -v --tb=short
